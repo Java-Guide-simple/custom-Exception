@@ -38,13 +38,13 @@ public class AccountTests {
 
     @Test
     public void givenValidWithdrawAmountThenReturnNewBalance() throws InsufficientFundException, NegativeIntegerException {
-        double newBalance = account.withdraw(5000);
+        int newBalance = account.withdraw(5000);
         assertEquals(5000, newBalance, MESSAGE_THREE);
     }
 
     @Test
     public void givenZeroWithdrawAmountThenReturnSameBalance() throws InsufficientFundException, NegativeIntegerException {
-        double newBalance = account.withdraw(0);
+        int newBalance = account.withdraw(0);
         assertEquals(10000, newBalance, MESSAGE_THREE);
     }
 
